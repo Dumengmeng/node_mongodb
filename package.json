@@ -1,0 +1,20 @@
+{
+  "name": "node_mongodb",
+  "version": "0.0.1",
+  "description": "a project use node & monogodb",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "jade": "^1.11.0",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.10",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dmm",
+  "license": "ISC"
+}
