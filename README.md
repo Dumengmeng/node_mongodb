@@ -27,4 +27,14 @@ bower install
 #app.js里边，在链接数据库时，需设置useMongoClient: true，否则会报错
 
 
+#项目二期
+npm install grunt -g
+npm install grunt-cli -g
+npm install grunt-contrib-watch --save-dev
+npm install grunt-nodemon --save-dev
+npm install grunt-concurrent --save-dev
+
+## 直接执行grunt便可启动服务，并跟随文档的更新自启动服务
+
+
 
