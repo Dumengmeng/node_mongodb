@@ -30,7 +30,9 @@ exports.detail = function(req, res) {
             // name为要关联的字段
             // 根据from里边的ObjectId字段，去表(user)里边查询name字段，并填充到from里边
             .populate("from", "name")
+            .populate("replay.from replay.to", "name")
             .exec(function(err, comments) {
+                console.log("comments: " + comments)
                 res.render("detail", {
                     title: "电影: " + movie.title,
                     movie: movie,
