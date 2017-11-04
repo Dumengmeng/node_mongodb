@@ -22,7 +22,7 @@ exports.save = function(req, res) {
             comment.save(function(err, comment) {
                 if (err) { console.log(err) }
 
-                res.redirect('/movie/', movieId)
+                res.redirect('/movie/' + movieId)
             })
         })
     } else {

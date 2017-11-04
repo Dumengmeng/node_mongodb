@@ -32,7 +32,6 @@ exports.detail = function(req, res) {
             .populate("from", "name")
             .populate("replay.from replay.to", "name")
             .exec(function(err, comments) {
-                console.log("comments: " + comments)
                 res.render("detail", {
                     title: "电影: " + movie.title,
                     movie: movie,
