@@ -1,9 +1,10 @@
 /* 
  * 定义模式
  */
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema
 
-let MovieSchema = new mongoose.Schema({
+let MovieSchema = new Schema({
     doctor: String,
     title: String,
     language: String,
@@ -12,6 +13,13 @@ let MovieSchema = new mongoose.Schema({
     flash: String,
     poster: String,
     year: String,
+    // 可以使用String或者ObjectId，推荐使用ObjectId是因为，这样可以建立一个双向的映射，查到当前电影数据的同时，
+    // 也能得到该电影对应的category的name、或者id等数据，若使用string，则必须进行二次查询，通过category的name，
+    // 找到该category对应的id，进而查找其他对应的数据，这样一来就比较麻烦
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category'
+    },
     meta: {
         createAt: {
             type: Date,
