@@ -6,6 +6,7 @@ const _ = require("underscore");
 
 exports.save = function(req, res) {
     let _comment = req.body.comment
+
     let movieId = _comment.movie
     let comment = new Comment(_comment);
 
